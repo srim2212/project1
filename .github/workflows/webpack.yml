@@ -27,7 +27,7 @@ jobs:
         npm install
         npm run build --if-present
     - name: Zip artifact for deployment
-      run: zip release.zip ./dist/* -r
+      run: zip release.zip ./build/* -r
     - uses: actions/upload-artifact@v4
       with:
         name: my-artifact
