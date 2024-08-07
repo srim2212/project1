@@ -53,7 +53,7 @@ jobs:
         uses: String-Obj/ssh-scp-deploy@v1.0.9
         with:
           # Local file path
-          local: my-artifact # optional, default is ./
+          local: release.zip # optional, default is ./
           # Remote file path
           remote: ~/ # optional, default is ~/
           # Remote server address
