@@ -53,7 +53,7 @@ jobs:
         uses: String-Obj/ssh-scp-deploy@v1.0.9
         with:
           # Local file path
-          local: release.zip # optional, default is ./
+          local: ./**/ # optional, default is ./
           # Remote file path
           remote: ~/ # optional, default is ~/
           # Remote server address
@@ -67,7 +67,7 @@ jobs:
           # # Remote server private key
           # key: # optional
           # # Command to run via ssh before scp upload
-          pre_upload: pwd # optional
+          pre_upload: echo pwd # optional
           # # Command to run via ssh after scp upload
           # post_upload: # optional
           # # A set of ssh_option separated by -o
