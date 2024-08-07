@@ -43,3 +43,16 @@ jobs:
         name: my-artifact
     - name: Display structure of downloaded files
       run: ls -R
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy to VM
+      uses: appleboy/ssh-action@master
+      with:
+        username: aaa
+        host: 1.1.1.1
+        password: password
+        script:
+          cd /project1
+          ls -l
+        
