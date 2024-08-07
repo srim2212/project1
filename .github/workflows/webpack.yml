@@ -53,9 +53,9 @@ jobs:
         uses: String-Obj/ssh-scp-deploy@v1.0.9
         with:
           # Local file path
-          local: ./ # optional, default is ./
+          local: my-artifact # optional, default is ./
           # Remote file path
-          remote: ~/project1 # optional, default is ~/
+          remote: ~/ # optional, default is ~/
           # Remote server address
           host: ${{secrets.HOST}}
           # Remote server port (default 22)
