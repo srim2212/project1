@@ -47,7 +47,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: zz-ssh-scp-deploy
+      # - name: zz-ssh-scp-deploy
         # You may pin to the exact commit or the version.
         # uses: String-Obj/ssh-scp-deploy@031ec6b8005e8ccbab8fffdc9aa197cf894c2bad
         # uses: String-Obj/ssh-scp-deploy@v1.0.9
