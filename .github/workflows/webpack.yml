@@ -66,10 +66,11 @@ jobs:
         host: ${{secrets.HOST}}
         username: ${{secrets.USERNAME}}
         password: ${{secrets.PASSWORD}}
-        run: |
-          cd project1
-          unzip release.zip
-          cd build
+        timeout: 30s
+        script: |
+          # cd project1
+          # unzip release.zip
+          # cd build
           pwd
           ls -l
         
