@@ -61,6 +61,6 @@ jobs:
         source: my-artifact
         target: "~/project1"
         script:
-          cd /project1
+          pwd
           ls -l
         
