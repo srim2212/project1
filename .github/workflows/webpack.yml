@@ -59,7 +59,7 @@ jobs:
         username: ${{secrets.USERNAME}}
         password: ${{secrets.PASSWORD}}
         source: my-artifact
-        target: "~/project1"
+        target: "/home/snplus-vm-admin/project1"
         script:
           pwd
           ls -l
