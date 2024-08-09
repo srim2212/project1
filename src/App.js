@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          This React App is deployed using Azure YAML Pipelines. The app is running in {process.env.REACT_APP_ENVIRONMENT}
+          This React App is deployed using Azure YAML Pipelines using GitHub Actions. The app is running in {process.env.REACT_APP_ENVIRONMENT}
         </p>
         <a
           className="App-link"
