@@ -68,9 +68,10 @@ jobs:
         password: ${{secrets.PASSWORD}}
         timeout: 30s
         script: |
-          # cd project1
-          # unzip release.zip
-          # cd build
+          cd project1/
+          unzip release.zip
+          ls -l
+          cd build/
           pwd
           ls -l
         
