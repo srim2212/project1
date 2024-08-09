@@ -50,17 +50,17 @@ jobs:
     - uses: actions/download-artifact@v4
       with:
         name: my-artifact
-    - name: Display structure of downloaded files
-      run: ls -R
+    # - name: Display structure of downloaded files
+    #   run: ls -R
     - name: Deploy to VM
       uses: appleboy/scp-action@master
       with:
         host: ${{secrets.HOST}}
         username: ${{secrets.USERNAME}}
         password: ${{secrets.PASSWORD}}
-        source: my-artifact
+        source: "."
         target: "/home/snplus-vm-admin/project1"
-        script:
-          pwd
-          ls -l
+        # script:
+        #   pwd
+        #   ls -l
         
