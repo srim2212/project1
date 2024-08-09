@@ -43,19 +43,24 @@ jobs:
         name: my-artifact
     - name: Display structure of downloaded files
       run: ls -R
-  # deploy:
-  #   needs: build
-  #   runs-on: ubuntu-latest
-    # steps:
-    # - name: Deploy to VM
-    #   uses: appleboy/ssh-action@master
-    #   with:
-    #     host: ${{secrets.HOST}}
-    #     username: ${{secrets.USERNAME}}
-    #     password: ${{secrets.PASSWORD}}
-    #     source: my-artifact
-    #     target: "project1"
-    #     # script:
-    #     #   cd /project1
-    #     #   ls -l
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/download-artifact@v4
+      with:
+        name: my-artifact
+    - name: Display structure of downloaded files
+      run: ls -R
+    - name: Deploy to VM
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{secrets.HOST}}
+        username: ${{secrets.USERNAME}}
+        password: ${{secrets.PASSWORD}}
+        source: my-artifact
+        target: "~/project1"
+        script:
+          cd /project1
+          ls -l
         
